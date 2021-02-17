@@ -49,13 +49,10 @@ end
 
 def add_s(array)
   new_array = []
-  array.each do |element|
-    if array[1] != element
+  array.each_with_index.collect do |element, index|
+    if index != 1
       element << "s"
-      
     end
-    new_array << element
   end
-  
-  return new_array
+  return array
 end
